@@ -1,0 +1,30 @@
+{
+  "name": "quder-remote",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production-oriented AnyDesk-style remote desktop foundation with secure signaling and low-latency WebRTC sessions.",
+  "type": "module",
+  "scripts": {
+    "dev": "npm --workspace @quder/protocol run build && npm-run-all --parallel dev:server dev:web",
+    "dev:server": "npm --workspace @quder/server run dev",
+    "dev:web": "npm --workspace @quder/web run dev",
+    "build": "npm --workspace @quder/protocol run build && npm --workspace @quder/server run build && npm --workspace @quder/web run build",
+    "typecheck": "npm --workspace @quder/protocol run build && npm --workspace @quder/server run typecheck && npm --workspace @quder/web run typecheck",
+    "lint": "npm --workspace @quder/protocol run lint && npm --workspace @quder/server run lint && npm --workspace @quder/web run lint"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1037.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@quder/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@quder/protocol": "0.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "vite": "^7.1.12"
+  }
+}
