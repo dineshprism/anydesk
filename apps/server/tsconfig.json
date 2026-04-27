@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": "../../",
     "outDir": "dist",
-    "rootDir": "src"
-  },
-  "references": [
-    {
-      "path": "../../packages/protocol"
+    "rootDir": "src",
+    "paths": {
+      "@quder/protocol": ["packages/protocol/dist/index.d.ts"]
     }
-  ],
+  },
   "include": ["src"]
 }
